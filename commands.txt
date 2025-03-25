@@ -1,0 +1,20 @@
+-----------------local IP find--------------------------
+
+ipconfig getifaddr en0  
+
+
+-----------------virtual environment---------------------
+
+python3 -m venv venv          
+
+source venv/bin/activate
+
+------------------ngrok-------------------------------------
+
+python3 app.py  
+
+ngrok http 5001 
+
+----------------check the attack is run or not------------------------
+
+ sudo tcpdump -i lo0 -n
